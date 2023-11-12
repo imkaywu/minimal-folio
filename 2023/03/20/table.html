@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>displaying Markdown tables</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel="stylesheet" href="/minimal-folio/assets/css/main.css">
+    <link rel="canonical" href="/minimal-folio/2023/03/20/table.html">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+  <script type="text/javascript">
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+  <body>
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/minimal-folio/">
+      minimal folio
+    </a>
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+
+        <a class="page-link" href="/minimal-folio/articles">
+          articles
+        </a>
+
+        
+          
+          <a class="page-link" href="/minimal-folio/">
+              about
+            </a>
+          
+        
+          
+          <a class="page-link" href="/minimal-folio/gallery/">
+              gallery
+            </a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/minimal-folio/projects/">
+              projects
+            </a>
+          
+        
+          
+        
+          
+        
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">displaying Markdown tables</h1>
+    <p class="post-meta">March 20, 2023 — 11:37</p>
+  </header>
+
+  <article class="post-content">
+    <p>Using markdown to display tables is easy. Just use the following syntax:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Left aligned | Center aligned | Right aligned |
+| :----------- | :------------: | ------------: |
+| Left 1       | center 1       | right 1       |
+| Left 2       | center 2       | right 2       |
+| Left 3       | center 3       | right 3       |
+</code></pre></div></div>
+
+<p>That will generate:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Left 1</td>
+      <td style="text-align: center">center 1</td>
+      <td style="text-align: right">right 1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Left 2</td>
+      <td style="text-align: center">center 2</td>
+      <td style="text-align: right">right 2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Left 3</td>
+      <td style="text-align: center">center 3</td>
+      <td style="text-align: right">right 3</td>
+    </tr>
+  </tbody>
+</table>
+
+  </article>
+
+</div>
+
+<script defer src="/minimal-folio/assets/js/copy-code-button.js" type="text/javascript"></script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+  	<p>This site was built using <a href="http://jekyllrb.com"
+        target="_blank">Jekyll</a> and is hosted on <a href="https://github.com"
+        target="_blank">Github</a> Photos from <a href="https://unsplash.com"
+    target="_blank">Unsplash</a> and text generated with <a
+    href="http://hipsum.co" target="_blank">Hipster Ipsum</a>. &#169; 2015, 2023</p>
+  </div>
+
+</footer>
+
+  </body>
+
+</html>

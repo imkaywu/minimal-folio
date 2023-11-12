@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>a post with custom blockquotes</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel="stylesheet" href="/minimal-folio/assets/css/main.css">
+    <link rel="canonical" href="/minimal-folio/2023/09/05/custom-blockquotes.html">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+  <script type="text/javascript">
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+  <body>
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/minimal-folio/">
+      minimal folio
+    </a>
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+
+        <a class="page-link" href="/minimal-folio/articles">
+          articles
+        </a>
+
+        
+          
+          <a class="page-link" href="/minimal-folio/">
+              about
+            </a>
+          
+        
+          
+          <a class="page-link" href="/minimal-folio/gallery/">
+              gallery
+            </a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/minimal-folio/projects/">
+              projects
+            </a>
+          
+        
+          
+        
+          
+        
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">a post with custom blockquotes</h1>
+    <p class="post-meta">September 5, 2023 — 09:40</p>
+  </header>
+
+  <article class="post-content">
+    <p>This post shows how to add custom styles for blockquotes. Based on <a href="https://github.com/sighingnow/jekyll-gitbook">jekyll-gitbook</a> implementation.</p>
+
+<p>We decided to support the same custom blockquotes as in <a href="https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html">jekyll-gitbook</a>, which are also found in a lot of other sites’ styles. The styles definitions can be found on the <a href="https://github.com/imkaywu/minimal-folio/blob/master/_sass/_base.scss">_base.scss</a> file, more specifically:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Notes, warnings, and error */</span>
+<span class="nc">.post</span> <span class="nc">.post-content</span> <span class="nt">blockquote</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nc">.block-note</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$bq-note-color</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$bq-note-color-bg</span><span class="p">;</span>
+
+    <span class="nt">p</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$bq-note-color-text</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$bq-note-color-title</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nc">.block-warning</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$bq-warning-color</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$bq-warning-color-bg</span><span class="p">;</span>
+
+    <span class="nt">p</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$bq-warning-color-text</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$bq-warning-color-title</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">&amp;</span><span class="nc">.block-error</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$bq-error-color</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$bq-error-color-bg</span><span class="p">;</span>
+
+    <span class="nt">p</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$bq-error-color-text</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
+      <span class="nl">color</span><span class="p">:</span> <span class="nv">$bq-error-color-title</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>A regular blockquote can be used as following:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; This is a regular blockquote</span>
+<span class="gt">&gt; and it can be used as usual</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>This is a regular blockquote
+and it can be used as usual</p>
+</blockquote>
+
+<p>These custom styles can be used by adding the specific class to the blockquote, as follows:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### NOTE</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; A note can be used when you want to give advice</span>
+<span class="gt">&gt; related to a certain content.</span>
+{: .block-note }
+</code></pre></div></div>
+
+<blockquote class="block-note">
+  <h5 id="note">NOTE</h5>
+
+  <p>A note can be used when you want to give advice
+related to a certain content.</p>
+</blockquote>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### WARNING</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; This is a warning, and thus should</span>
+<span class="gt">&gt; be used when you want to warn the user</span>
+{: .block-warning }
+</code></pre></div></div>
+
+<blockquote class="block-warning">
+  <h5 id="warning">WARNING</h5>
+
+  <p>This is a warning, and thus should
+be used when you want to warn the user</p>
+</blockquote>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### ERROR</span>
+<span class="gt">&gt;</span>
+<span class="gt">&gt; This is an error, and thus should</span>
+<span class="gt">&gt; be used carefully</span>
+{: .block-error }
+</code></pre></div></div>
+
+<blockquote class="block-error">
+  <h5 id="error">ERROR</h5>
+
+  <p>This is an error, and thus should
+be used carefully</p>
+</blockquote>
+
+  </article>
+
+</div>
+
+<script defer src="/minimal-folio/assets/js/copy-code-button.js" type="text/javascript"></script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+  	<p>This site was built using <a href="http://jekyllrb.com"
+        target="_blank">Jekyll</a> and is hosted on <a href="https://github.com"
+        target="_blank">Github</a> Photos from <a href="https://unsplash.com"
+    target="_blank">Unsplash</a> and text generated with <a
+    href="http://hipsum.co" target="_blank">Hipster Ipsum</a>. &#169; 2015, 2023</p>
+  </div>
+
+</footer>
+
+  </body>
+
+</html>
